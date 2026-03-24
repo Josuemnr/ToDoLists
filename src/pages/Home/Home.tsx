@@ -10,18 +10,19 @@ const Home = () => {
     };
 
     const navigateToTasks = (id: string) => {
-        navigate('/tasks/${id}'); //navegamos a la pagina de tasks
+        navigate(`/tasks/${id}`); //navegamos a la pagina de tasks
     };
 
     //van use effects
     //va el render
   return (
+    
     <div>
-        <div> 
+        <nav style={{ padding: '20px', display: 'flex', gap: '10px', justifyContent: 'center' }}> 
             <Link to="/about">About</Link> 
             <button onClick={navigateToSearch}> Go to Search</button>
             <button onClick={() => navigateToTasks('123')}> Go to Tasks 123</button>
-        </div>
+        </nav>
         <h1>Dashboard</h1>
     </div>
   );
